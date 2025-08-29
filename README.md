@@ -2,7 +2,7 @@
 Annapurna AI is an intelligent B2B SaaS platform designed to eliminate food waste in institutional kitchens—such as college canteens, corporate cafeterias, and hospitals—by replacing traditional guesswork with data-driven, prescriptive intelligence.
 <br>
 The Problem
-In India, institutional foodservice is a major contributor to the nation's food waste crisis, which accounts for an economic loss of over ₹900 billion annually.[1] This inefficiency stems from outdated, manual processes, primarily inaccurate demand forecasting, which leads to systemic overproduction and significant financial and environmental costs.
+In India, institutional foodservice is a major contributor to the nation's food waste crisis, which accounts for an economic loss of over ₹900 billion annually. This inefficiency stems from outdated, manual processes, primarily inaccurate demand forecasting, which leads to systemic overproduction and significant financial and environmental costs.
 <br>
 Our Solution
 Annapurna AI tackles this problem with a holistic, cloud-based platform that optimizes the entire food lifecycle, from procurement to consumption. The system consists of two interconnected components:
