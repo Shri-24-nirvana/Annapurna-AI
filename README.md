@@ -12,7 +12,8 @@ Our core innovation is prescriptive intelligence. We don't just report on past w
 <br>
 Technology & Features
 The platform is built on a modern cloud architecture and leverages a sophisticated AI engine to deliver its core value.
-AI & Machine Learning: We employ an ensemble of advanced machine learning models, including LSTM (Long Short-Term Memory) and SARIMA (Seasonal ARIMA), to capture complex, non-linear demand patterns and predictable seasonal cycles with high accuracy.[1]
+AI & Machine Learning: We employ an ensemble of advanced machine learning models, including LSTM (Long Short-Term Memory) and SARIMA (Seasonal ARIMA), to capture complex, non-linear demand patterns and predictable seasonal cycles with high accuracy.
+
 AI-Powered Demand Forecasting: The predictive heart of the platform, providing actionable instructions to kitchen staff.
 Smart Inventory Management: Automates stock level tracking and generates intelligent replenishment recommendations to prevent spoilage.
 Waste Analytics & Tracking: Uses integrated hardware to capture and categorize food waste, creating a continuous feedback loop that makes our AI models smarter over time.
