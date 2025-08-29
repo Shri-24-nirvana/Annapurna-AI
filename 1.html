@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annapurna AI - End Food Waste with AI</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles & Configuration -->
+    <style>
+        /* Custom styles for better aesthetics */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC; /* Light grey background */
+        }
+
+        /* Define custom colors based on the plan */
+        .bg-primary { background-color: #0A2540; } /* Deep Blue */
+        .bg-secondary { background-color: #4ADE80; } /* Light Green */
+        .text-primary { color: #0A2540; }
+        .text-secondary { color: #4ADE80; }
+        .border-secondary { border-color: #4ADE80; }
+
+        /* Style for the sticky nav */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        /* Accordion styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- =========== NAVIGATION BAR =========== -->
+    <nav id="navbar" class="bg-white/80 backdrop-blur-md shadow-sm sticky-nav">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-9-5.747h18"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.5 12.001a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0z"></path></svg>
+                    <span class="text-2xl font-bold text-primary">Annapurna AI</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-primary transition">Home</a>
+                    <a href="#problem" class="text-gray-600 hover:text-primary transition">The Problem</a>
+                    <a href="#solution" class="text-gray-600 hover:text-primary transition">Our Solution</a>
+                    <a href="#features" class="text-gray-600 hover:text-primary transition">Features</a>
+                    <a href="#impact" class="text-gray-600 hover:text-primary transition">Our Impact</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary transition">Contact</a>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="#contact" class="hidden md:inline-block bg-secondary text-primary font-bold py-2 px-5 rounded-lg shadow-md hover:bg-green-400 transition">
+                    Request a Demo
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#home" class="block py-2 text-gray-600 hover:text-primary">Home</a>
+                <a href="#problem" class="block py-2 text-gray-600 hover:text-primary">The Problem</a>
+                <a href="#solution" class="block py-2 text-gray-600 hover:text-primary">Our Solution</a>
+                <a href="#features" class="block py-2 text-gray-600 hover:text-primary">Features</a>
+                <a href="#impact" class="block py-2 text-gray-600 hover:text-primary">Our Impact</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-primary">Contact</a>
+                <a href="#contact" class="block mt-4 bg-secondary text-primary font-bold py-2 px-5 rounded-lg text-center">Request a Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =========== HERO SECTION =========== -->
+    <header id="home" class="relative bg-primary text-white py-32 md:py-48 overflow-hidden">
+        <!-- Background Video Placeholder -->
+        <div class="absolute inset-0 z-0">
+            <!-- In a real implementation, you would replace this div with your <video> tag -->
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <!-- I've added a high-quality, relevant stock video. You can replace this src with your own video file. -->
+                <source src="1755635596335.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                width="100%" height= auto class="object-cover">
+            </video>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                Stop Guessing. Start Saving.<br>End Food Waste with AI.
+            </h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-300 mb-8">
+                Annapurna AI is an intelligent platform that helps institutional canteens cut food waste by up to 30% and save lakhs annually through data-driven predictions.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#contact" class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-green-400 transition text-lg w-full sm:w-auto">
+                    Request a Demo
+                </a>
+                <a href="#solution" class="text-gray-300 hover:text-white transition w-full sm:w-auto">
+                    See How It Works
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== THE PROBLEM SECTION =========== -->
+        <section id="problem" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary">The High Cost of Guesswork</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <!-- Column 1: Food Waste -->
+                    <div class="p-6 border border-gray-200 rounded-lg shadow-sm">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-red-100 p-4 rounded-full">
+                                <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2">30% of Food Wasted</h3>
+                        <p class="text-gray-600">Institutional canteens discard nearly a third of all cooked food daily, leading to massive environmental strain.</p>
+                    </div>
+                    <!-- Column 2: Financial Loss -->
+                    <div class="p-6 border border-gray-200 rounded-lg shadow-sm">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-yellow-100 p-4 rounded-full">
+                                <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 13v-1m-4-6H7m10 0h-1M7.05 17.05l.707-.707M16.243 7.757l-.707.707M6.343 7.757l.707.707M17.657 17.05l-.707-.707"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2">Lakhs Lost Annually</h3>
+                        <p class="text-gray-600">This waste translates directly into financial losses, inflating operational costs and mess fees.</p>
+                    </div>
+                    <!-- Column 3: Low Satisfaction -->
+                    <div class="p-6 border border-gray-200 rounded-lg shadow-sm">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-blue-100 p-4 rounded-full">
+                                <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2">Repetitive Menus</h3>
+                        <p class="text-gray-600">Lack of a proper feedback loop results in menus that don't cater to preferences, leading to diner dissatisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== OUR SOLUTION SECTION =========== -->
+        <section id="solution" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary">Introducing Annapurna AI: The Smart Canteen Platform</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column: Phone Mockup -->
+                    <div class="p-4 bg-white rounded-lg shadow-xl border">
+                        <div class="bg-gray-200 h-[28rem] rounded-md flex items-center justify-center">
+                           <div class="w-4/5 h-auto bg-white rounded-lg p-4 shadow-inner">
+                               <div class="flex justify-between items-center mb-4">
+                                   <span class="text-sm font-bold text-primary">Student App</span>
+                                   <div class="flex space-x-1">
+                                       <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+                                       <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+                                       <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+                                   </div>
+                               </div>
+                               <div class="space-y-3">
+                                   <div class="bg-gray-100 p-2 rounded">Today's Menu</div>
+                                   <div class="bg-green-100 p-2 rounded text-green-800">Rate Your Meal</div>
+                                   <div class="bg-gray-100 p-2 rounded">Upcoming Menu</div>
+                                   <div class="bg-blue-100 p-2 rounded text-blue-800">My Feedback</div>
+                                   <div class="bg-yellow-100 p-2 rounded text-yellow-800">My Rewards</div>
+                                   <div class="bg-gray-100 p-2 rounded">My Account</div>
+                               </div>
+                           </div>
+                        </div>
+                        <p class="text-center mt-4 text-gray-600">Student-facing app for feedback and menu viewing.</p>
+                    </div>
+                    <!-- Right Column: Dashboard Mockup -->
+                    <div class="p-4 bg-white rounded-lg shadow-xl border">
+                        <div class="bg-gray-200 h-[28rem] rounded-md flex items-center justify-center">
+                           <div class="w-11/12 h-auto bg-white rounded-lg p-4 shadow-inner">
+                               <div class="flex justify-between items-center mb-4">
+                                   <span class="text-sm font-bold text-primary">Admin Dashboard</span>
+                               </div>
+                               <div class="grid grid-cols-2 gap-3">
+                                   <div class="bg-blue-100 p-2 rounded text-blue-800">Demand Forecast</div>
+                                   <div class="bg-gray-100 p-2 rounded">Inventory</div>
+                                   <div class="bg-gray-100 p-2 rounded">Feedback Analytics</div>
+                                   <div class="bg-gray-100 p-2 rounded">Reports</div>
+                                   <div class="bg-green-100 p-2 rounded text-green-800">Savings Tracker</div>
+                                   <div class="bg-gray-100 p-2 rounded">Meal Plan</div>
+                               </div>
+                           </div>
+                        </div>
+                        <p class="text-center mt-4 text-gray-600">Admin dashboard for data-driven decisions.</p>
+                    </div>
+                </div>
+                 <p class="text-center mt-12 text-lg text-gray-700 max-w-3xl mx-auto">
+                    Our two-part system connects diner feedback directly with canteen management, creating a seamless data loop for continuous optimization and waste reduction.
+                </p>
+            </div>
+        </section>
+
+        <!-- =========== HOW IT WORKS SECTION =========== -->
+        <section id="how-it-works" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary">From Data to Decision in 3 Simple Steps</h2>
+                </div>
+                <!-- Flowchart -->
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center text-center w-full md:w-1/3">
+                        <div class="bg-secondary text-primary w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">1</div>
+                        <h3 class="text-xl font-bold text-primary mb-2">Collect Feedback</h3>
+                        <p class="text-gray-600">Diners rate meals and indicate preferences through the simple mobile app.</p>
+                    </div>
+                    <!-- Arrow -->
+                    <div class="hidden md:block text-primary text-4xl transform -translate-y-4">→</div>
+                    <div class="md:hidden text-primary text-4xl transform rotate-90 my-4">→</div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center text-center w-full md:w-1/3">
+                        <div class="bg-secondary text-primary w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">2</div>
+                        <h3 class="text-xl font-bold text-primary mb-2">Analyze & Predict</h3>
+                        <p class="text-gray-600">Our AI engine processes historical data and feedback to forecast demand for each menu item with high accuracy.</p>
+                    </div>
+                     <!-- Arrow -->
+                    <div class="hidden md:block text-primary text-4xl transform -translate-y-4">→</div>
+                    <div class="md:hidden text-primary text-4xl transform rotate-90 my-4">→</div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center text-center w-full md:w-1/3">
+                        <div class="bg-secondary text-primary w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">3</div>
+                        <h3 class="text-xl font-bold text-primary mb-2">Optimize Cooking</h3>
+                        <p class="text-gray-600">Admins receive precise cooking quantities, ensuring they prepare just enough food, minimizing waste and cost.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== FEATURES SECTION =========== -->
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary">A Toolkit for Total Canteen Optimization</h2>
+                </div>
+                <div class="max-w-3xl mx-auto">
+                    <div class="space-y-4 accordion-container">
+                        <!-- Accordion Item 1 -->
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="accordion-header w-full text-left p-5 font-semibold text-lg text-primary flex justify-between items-center hover:bg-gray-50">
+                                <span>AI Prediction Engine</span>
+                                <svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="p-5 pt-0 text-gray-600">Our core AI model analyzes past consumption patterns, student feedback, and external factors like weather to provide precise cooking quantities for every meal. This eliminates guesswork and drastically reduces overproduction.</p>
+                            </div>
+                        </div>
+                        <!-- Accordion Item 2 -->
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="accordion-header w-full text-left p-5 font-semibold text-lg text-primary flex justify-between items-center hover:bg-gray-50">
+                                <span>Smart Inventory Management</span>
+                                <svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="p-5 pt-0 text-gray-600">Based on demand forecasts, the platform helps you order the right amount of raw materials. Prevent overstocking of perishable goods and reduce inventory holding costs, ensuring freshness and minimizing spoilage.</p>
+                            </div>
+                        </div>
+                        <!-- Accordion Item 3 -->
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="accordion-header w-full text-left p-5 font-semibold text-lg text-primary flex justify-between items-center hover:bg-gray-50">
+                                <span>Feedback & Menu Analytics</span>
+                                <svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="p-5 pt-0 text-gray-600">Collate real-time ratings and comments from diners to understand their preferences. Use powerful analytics to identify popular dishes, refine recipes, and create menus that people genuinely love, boosting satisfaction.</p>
+                            </div>
+                        </div>
+                        <!-- Accordion Item 4 -->
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="accordion-header w-full text-left p-5 font-semibold text-lg text-primary flex justify-between items-center hover:bg-gray-50">
+                                <span>Digital Payments & Reporting</span>
+                                <svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="p-5 pt-0 text-gray-600">Integrate with popular payment gateways for seamless, cashless transactions. Generate comprehensive financial reports, track expenses, and get a clear overview of your canteen's financial performance with just a few clicks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== OUR IMPACT SECTION =========== -->
+        <section id="impact" class="py-20 bg-primary text-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Real Results. Real Savings.</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center mb-16">
+                    <div>
+                        <span class="counter text-5xl md:text-6xl font-extrabold text-secondary" data-target="30">0</span><span class="text-5xl md:text-6xl font-extrabold text-secondary">%</span>
+                        <p class="mt-2 text-lg text-gray-300">Average Reduction in Food Waste</p>
+                    </div>
+                    <div>
+                        <span class="text-5xl md:text-6xl font-extrabold text-secondary">₹</span><span class="counter text-5xl md:text-6xl font-extrabold text-secondary" data-target="15">0</span><span class="text-5xl md:text-6xl font-extrabold text-secondary">L+</span>
+                        <p class="mt-2 text-lg text-gray-300">Potential Annual Savings per 1000 Students</p>
+                    </div>
+                    <div>
+                        <span class="counter text-5xl md:text-6xl font-extrabold text-secondary" data-target="90">0</span><span class="text-5xl md:text-6xl font-extrabold text-secondary">%</span>
+                        <p class="mt-2 text-lg text-gray-300">Accuracy of AI-powered Prediction</p>
+                    </div>
+                </div>
+
+                <!-- ROI Calculator -->
+                <div class="max-w-2xl mx-auto bg-white/10 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold text-center mb-4">Calculate Your Potential Savings</h3>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="number" id="student-count" placeholder="Enter number of students/employees" class="w-full p-3 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        <button id="calculate-roi" class="bg-secondary text-primary font-bold py-3 px-6 rounded-md hover:bg-green-400 transition w-full sm:w-auto">Calculate Now</button>
+                    </div>
+                    <div id="roi-result" class="text-center mt-6 text-2xl font-bold text-white hidden">
+                        Estimated Annual Savings: <span id="savings-amount" class="text-secondary"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- =========== PILOT PROGRAM SECTION =========== -->
+        <section id="pilot" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Pilot Program at Jabalpur Engineering College</h2>
+                        <p class="text-gray-600 text-lg mb-6">We are proud to be running our initial pilot program at JEC, gathering crucial data and refining our platform. We are actively seeking partner institutions to join us on our mission to create sustainable and efficient canteens everywhere.</p>
+                        <a href="#contact" class="text-primary font-bold hover:text-secondary transition">Partner with us →</a>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/0A2540/FFFFFF?text=JEC+Canteen+Photo" alt="Jabalpur Engineering College Canteen" class="rounded-lg shadow-xl w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== CONTACT SECTION =========== -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary">Ready to Revolutionize Your Canteen?</h2>
+                    <p class="text-gray-600 mt-4 mb-8">Fill out the form below, and our team will get in touch to schedule a personalized demo of the Annapurna AI platform.</p>
+                </div>
+                <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg border">
+                    <form action="#" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                            <input type="text" name="institution" placeholder="Institution Name" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-6">
+                             <input type="text" name="role" placeholder="Your Role (e.g., Dean, Admin, Mess Manager)" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                            <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-900 transition w-full">Submit Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========== FOOTER =========== -->
+    <footer class="bg-primary text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Column 1: Logo & Mission -->
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-4">
+                        <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-9-5.747h18"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.5 12.001a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0z"></path></svg>
+                        <span class="text-2xl font-bold">Annapurna AI</span>
+                    </a>
+                    <p class="text-gray-400">Our mission is to leverage technology to create sustainable and efficient food systems, starting with institutional canteens.</p>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Contact & Social -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: contact@annapurna-ai.com</li>
+                        <li>Phone: +91 12345 67890</li>
+                        <li>Jabalpur, Madhya Pradesh, India</li>
+                    </ul>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                &copy; <span id="current-year"></span> Annapurna AI. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========== JAVASCRIPT =========== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Accordion Functionality ---
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('svg');
+                    
+                    // Close other open accordions
+                    document.querySelectorAll('.accordion-item').forEach(item => {
+                        if (item !== header.parentElement) {
+                            item.querySelector('.accordion-content').style.maxHeight = null;
+                            item.querySelector('.accordion-header svg').classList.remove('rotate-180');
+                        }
+                    });
+
+                    // Toggle current accordion
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.classList.remove('rotate-180');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+            // --- Animated Counters ---
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200; // The lower the slower
+
+            const animateCounter = (counter) => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(() => animateCounter(counter), 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => {
+                observer.observe(counter);
+            });
+
+            // --- ROI Calculator ---
+            const calculateButton = document.getElementById('calculate-roi');
+            const studentInput = document.getElementById('student-count');
+            const resultDiv = document.getElementById('roi-result');
+            const savingsAmountSpan = document.getElementById('savings-amount');
+
+            calculateButton.addEventListener('click', () => {
+                const studentCount = parseInt(studentInput.value);
+                if (isNaN(studentCount) || studentCount <= 0) {
+                    // Using a more mobile-friendly way to show error instead of alert()
+                    studentInput.style.border = '2px solid red';
+                    setTimeout(() => { studentInput.style.border = ''; }, 3000);
+                    return;
+                }
+                
+                // Calculation logic: e.g., ₹1500 per student per year.
+                // (15 Lakhs / 1000 students = 1500 per student)
+                const savingsPerStudent = 1500;
+                const totalSavings = studentCount * savingsPerStudent;
+
+                // Format to Lakhs if high enough, otherwise show in thousands or plain number
+                let savingsText;
+                if (totalSavings >= 100000) {
+                    savingsText = `₹${(totalSavings / 100000).toFixed(2)} Lakhs`;
+                } else {
+                    savingsText = `₹${totalSavings.toLocaleString('en-IN')}`;
+                }
+                
+                savingsAmountSpan.textContent = savingsText;
+                resultDiv.classList.remove('hidden');
+            });
+
+            // --- Set Current Year in Footer ---
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+
+</body>
+</html>
