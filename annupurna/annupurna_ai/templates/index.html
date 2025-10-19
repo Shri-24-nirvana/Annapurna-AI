@@ -464,11 +464,14 @@
 
     <!-- =========== JAVASCRIPT =========== -->
     <script>
-      {% if messages %}
-        {% for message in messages %}
-            // The result will be a JavaScript alert call
-            alert("{{ message }}");
-        {% endfor %}
+    {% if messages %}
+      // Collect Django messages into a JS array safely
+      const djangoMessages = [
+      {% for message in messages %}
+        "{{ message|escapejs }}"{% if not forloop.last %},{% endif %}
+      {% endfor %}
+      ];
+      djangoMessages.forEach(msg => alert(msg));
     {% endif %}
       document.addEventListener('DOMContentLoaded', function () {
         // --- Mobile Menu Toggle ---
